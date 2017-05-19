@@ -1,0 +1,27 @@
+{
+  "name": "koa-template",
+  "version": "1.0.0",
+  "description": "koa server template",
+  "main": "server.js",
+  "author": "johnnyjiang",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "debug": "node --inspect server.js"
+  },
+  "keywords": [
+    "koa",
+    "node"
+  ],
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
