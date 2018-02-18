@@ -1,27 +1,35 @@
 {
-  "name": "koa-template",
+  "name": "koa-decorator",
   "version": "1.0.0",
-  "description": "koa server template",
-  "main": "server.js",
-  "author": "johnnyjiang",
+  "main": "index.js",
+  "author": "pplgin",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server.js",
-    "debug": "node --inspect server.js"
+    "dev": "ENV=develop nodemon --exec babel-node src/server",
+    "debug": "ENV=develop nodemon --inspect --exec babel-node src/server",
+    "start": "ENV=production babel-node src/server"
   },
-  "keywords": [
-    "koa",
-    "node"
-  ],
   "dependencies": {
-    "koa": "^2.2.0",
+    "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
-    "koa-router": "^7.1.1",
-    "koa-static": "^3.0.0",
+    "koa-compose": "^4.0.0",
+    "koa-generic-session": "^2.0.0",
+    "koa-multer": "^1.0.2",
+    "koa-redis": "^3.0.0",
+    "koa-router": "^7.2.1",
+    "koa-router-decorators": "^0.4.5",
+    "koa-session": "^5.5.0",
+    "koa-static": "^4.0.1",
     "koa-views": "^6.0.2",
+    "md5": "^2.2.1",
+    "nodemon": "^1.11.0",
     "swig": "^1.4.2"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.1",
+    "pm2": "^2.6.1"
   }
 }
