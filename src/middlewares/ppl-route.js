@@ -4,7 +4,7 @@ const path = require('path');
 
 let router = new Router();
 
-const routeConfig = require('./../route');
+const routeConfig = require('../routes');
 
 // 初始化路由配置
 routeConfig.forEach((rItem)=>{
