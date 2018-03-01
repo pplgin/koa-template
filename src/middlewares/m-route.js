@@ -23,8 +23,8 @@ module.exports = routes => {
     if(!className) {
       throw new Error('controller must be given')
     }
-
     const _control = require(path.join(__dirname, `../controllers/${className}`))
+
     // 是否有中间件
     switch (type(middleware)) {
       case 'function':

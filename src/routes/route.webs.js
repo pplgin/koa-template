@@ -7,4 +7,9 @@ module.exports = [{
 },{
   url: '/user/login',
   controller: 'user::login'
+  middleware: (ctx, next)=> {
+    console.log('log -midd');
+    return next()
+  },
+  method: 'get'
 }]
